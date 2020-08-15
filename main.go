@@ -11,6 +11,10 @@ import (
 
 func updateDNS() {
 	dnsHandler := dns.New(config.Base.Domain, utils.GetIP(), config.Base.RR)
+	if dnsHandler == nil {
+		return
+	}
+
 	err := dnsHandler.Bind()
 	if err != nil {
 		logger.Error(err.Error())

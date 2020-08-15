@@ -19,7 +19,8 @@ type Handler struct {
 
 func New(domain, ip, rr string) *Handler {
 	if domain == "" || ip == "" || rr == "" {
-		panic(fmt.Errorf("Domain, IP or RR cannot be empty"))
+		logger.Error("Domain, IP or RR cannot be empty")
+		return nil
 	}
 	client, err := alidns.NewClientWithAccessKey(config.Base.Region, config.Base.AccessKey, config.Base.AccessKeySecret)
 	if err != nil {
