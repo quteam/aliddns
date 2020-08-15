@@ -11,14 +11,14 @@ docker run registry.cn-chengdu.aliyuncs.com/quteam/aliddns
 ```
 
 ## 配置文件
-
+目录`config.json`
 ```json
 {
   "accessKey": "",
   "accessKeySecret": "",
-  "domain": "",             // 域名
-  "rr": "",                 // 记录
-  "interval": 30            // 运行周期（秒）
+  "domain": "",
+  "rr": "",
+  "interval": 30
 }
 ```
 

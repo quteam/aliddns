@@ -21,7 +21,7 @@ type Config struct {
 
 var Base = &Config{
 	Region:   "cn-hangzhou",
-	Interval: 10,
+	Interval: 20,
 }
 
 func loadConfig(filename string, config *Config) {
