@@ -8,13 +8,17 @@ import (
 var logger *log.Logger
 
 func Info(msg string, ctx ...interface{}) {
-	logger.Printf("INFO %s %v\n", msg, ctx)
+	if len(ctx) > 0 {
+		logger.Printf("🙂: %s %v\n", msg, ctx)
+	} else {
+		logger.Printf("🙂: %s\n", msg)
+	}
 }
 
 func Error(msg string, ctx ...interface{}) {
-	logger.Printf("ERROR %s %v\n", msg, ctx)
+	logger.Printf("😡: %s %v\n", msg, ctx)
 }
 
 func init() {
-	logger = log.New(os.Stdout, "[ALIDDNS]", log.LstdFlags)
+	logger = log.New(os.Stdout, "[DNS]:", log.LstdFlags)
 }
