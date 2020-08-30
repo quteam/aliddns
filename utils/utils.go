@@ -28,7 +28,7 @@ func Env(key string, defaultValue ...string) string {
 }
 
 func GetIP() string {
-	res, err := httpClient.Get("https://quteam.com/ip")
+	res, err := httpClient.Get("https://html.quteam.com/ip")
 	if err != nil {
 		logger.Error(err.Error())
 		return ""
