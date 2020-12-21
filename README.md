@@ -11,7 +11,7 @@ docker run quteam/aliddns
 ```
 
 ## 配置文件
-目录`config.json`
+目录`/app/config.json`
 ```json
 {
   "accessKey": "",
