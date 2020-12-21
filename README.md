@@ -7,7 +7,7 @@
 ## Docker 运行
 
 ```sh
-docker run registry.cn-chengdu.aliyuncs.com/quteam/aliddns
+docker run quteam/aliddns
 ```
 
 ## 配置文件
